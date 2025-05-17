@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ремонт кондиционеров — частный мастер</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    h1, h2, h3 { color: #003366; }
+    .cta { background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; display: inline-block; border-radius: 5px; margin: 10px 5px; }
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+    .review { border-bottom: 1px solid #ccc; padding: 10px 0; }
+    .contact-buttons { margin-top: 20px; }
+    @media(max-width: 600px) {
+      .container { padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Ремонт кондиционеров с выездом</h1>
+  <p><strong>Денис — частный мастер с опытом 5+ лет</strong></p>
+  <p>Приеду в день обращения, хоть ночью. Все запчасти и фреон при себе. Без диспетчеров, всё делаю лично и честно.</p>
+
+  <h2>Квиз — 3 вопроса и готово</h2>
+  <div id="quiz">
+    <div class="quiz-step active" data-step="1">
+      <p><strong>1. Что вам нужно?</strong></p>
+      <button onclick="nextStep(2)">Установка</button>
+      <button onclick="nextStep(2)">Обслуживание</button>
+      <button onclick="nextStep(2)">Ремонт</button>
+    </div>
+    <div class="quiz-step" data-step="2">
+      <p><strong>2. Как срочно?</strong></p>
+      <button onclick="nextStep(3)">Сегодня</button>
+      <button onclick="nextStep(3)">В течение 3 дней</button>
+      <button onclick="nextStep(3)">Проконсультироваться</button>
+    </div>
+    <div class="quiz-step" data-step="3">
+      <p><strong>3. Удобный способ связи:</strong></p>
+      <div class="contact-buttons">
+        <a class="cta" href="https://wa.me/79221300073" target="_blank">WhatsApp</a>
+        <a class="cta" href="https://t.me/+79221300073" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>Отзывы — Екатеринбург и пригороды</h2>
+  <div>
+    <div class="review"><strong>Анна, Екатеринбург</strong><br>Приехал вечером, всё почистил, запах исчез. Очень довольна.</div>
+    <div class="review"><strong>Игорь, Верхняя Пышма</strong><br>Быстрая заправка фреоном, отличный сервис. Спасибо!</div>
+    <div class="review"><strong>Мария, Арамиль</strong><br>Работает даже ночью! Починил дренаж, теперь всё отлично.</div>
+    <!-- Можно добавить ещё отзывы здесь -->
+  </div>
+
+  <h2>Контакты</h2>
+  <p>Пишите или звоните: <strong>+7 922 130-00-73</strong></p>
+  <a class="cta" href="https://wa.me/79221300073" target="_blank">WhatsApp</a>
+  <a class="cta" href="https://t.me/+79221300073" target="_blank">Telegram</a>
+</div>
+
+<script>
+  function nextStep(step) {
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+    document.querySelector('.quiz-step[data-step="'+step+'"]').classList.add('active');
+  }
+</script>
+
+</body>
+</html>
