@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ремонт кондиционеров в Екатеринбурге — Частный мастер Денис</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f9ff; color: #333; }
+    header { background: #007bff; color: white; padding: 30px 20px; text-align: center; }
+    header h1 { margin: 0 0 10px; font-size: 28px; }
+    header p { margin: 5px 0 15px; font-size: 16px; }
+    .cta-btns a { display: inline-block; margin: 5px; padding: 10px 20px; color: white; background: #28a745; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    .section { padding: 30px 20px; max-width: 900px; margin: auto; }
+    .section h2 { color: #003366; margin-bottom: 15px; }
+    .services ul, .benefits ul { padding-left: 20px; }
+    .card { background: white; padding: 20px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+    .quiz-step button { margin: 5px; padding: 10px 15px; border: none; background: #007bff; color: white; border-radius: 4px; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; }
+    @media(max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .cta-btns a { font-size: 14px; padding: 8px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ремонт и обслуживание кондиционеров</h1>
+  <p>Екатеринбург и пригороды — Частный мастер Денис, 5+ лет опыта</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/79221300073" target="_blank">WhatsApp</a>
+    <a href="https://t.me/+79221300073" target="_blank">Telegram</a>
+  </div>
+</header>
+
+<section class="section services">
+  <h2>Услуги</h2>
+  <ul>
+    <li>Установка и демонтаж сплит-систем</li>
+    <li>Ремонт любой сложности</li>
+    <li>Чистка, дезинфекция, промывка теплообменника</li>
+    <li>Заправка фреоном R410A, R22, R32</li>
+    <li>Поиск утечек, диагностика, замена плат и компрессора</li>
+    <li>Обслуживание офисов и организаций</li>
+  </ul>
+</section>
+
+<section class="section benefits">
+  <h2>Почему выбирают меня</h2>
+  <ul>
+    <li>Выезд в день обращения — даже ночью</li>
+    <li>Без посредников — только вы и мастер</li>
+    <li>Гарантия 6–12 месяцев на все работы</li>
+    <li>Запчасти и фреон всегда в наличии</li>
+    <li>Оплата: наличные, карта, чек по запросу</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Отзывы клиентов</h2>
+  <div class="card"><strong>Анна, Екатеринбург</strong><br>Денис приехал вечером, всё объяснил и починил. Очень вежливо и аккуратно.</div>
+  <div class="card"><strong>Игорь, Верхняя Пышма</strong><br>Быстро заправил фреон, теперь холодит идеально. Спасибо!</div>
+  <div class="card"><strong>Мария, Арамиль</strong><br>Работает даже ночью! Починил плату и дренаж — всё отлично.</div>
+</section>
+
+<section class="section">
+  <h2>Быстрый квиз — 3 вопроса</h2>
+  <div id="quiz">
+    <div class="quiz-step active" data-step="1">
+      <p><strong>1. Что вам нужно?</strong></p>
+      <button onclick="nextStep(2)">Установка</button>
+      <button onclick="nextStep(2)">Обслуживание</button>
+      <button onclick="nextStep(2)">Ремонт</button>
+    </div>
+    <div class="quiz-step" data-step="2">
+      <p><strong>2. Как срочно?</strong></p>
+      <button onclick="nextStep(3)">Сегодня</button>
+      <button onclick="nextStep(3)">3 дня</button>
+      <button onclick="nextStep(3)">Просто консультация</button>
+    </div>
+    <div class="quiz-step" data-step="3">
+      <p><strong>3. Как вам удобнее связаться?</strong></p>
+      <a class="cta-btns" href="https://wa.me/79221300073">WhatsApp</a>
+      <a class="cta-btns" href="https://t.me/+79221300073">Telegram</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Денис — ваш мастер по кондиционерам. Работаю по Екатеринбургу и ближайшим городам.</p>
+  <p>+7 922 130-00-73</p>
+</footer>
+
+<script>
+  function nextStep(step) {
+    document.querySelectorAll('.quiz-step').forEach(el => el.classList.remove('active'));
+    document.querySelector('.quiz-step[data-step="'+step+'"]').classList.add('active');
+  }
+</script>
+
+</body>
+</html>
